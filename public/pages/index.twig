@@ -1,0 +1,59 @@
+{% extends block('_extends') %}
+{% set title = 'EndySound' %}
+{% set section = 'index' %}
+
+{% block content %}
+<section class="player">
+	{% for key, item in data.sounds %}
+	<div class="player__item" data-key="{{ key }}" data-item-group="{{ item.category }}">
+		<div class="positionBar"></div>
+		<audio class="myaudio hidden" controls>
+			<source src="{{ item.src }}" type="audio/mpeg">
+		</audio>
+		<span id="displayStatus"></span>
+		<p class="player__item-name"><span>{{ item.name }}</span></p>
+		<div class="player__item-like-bg">
+			<div class="heart-dislike" data-dynamic="icn_heart_broken"></div>
+			<div class="heart-like" data-dynamic="icn_heart"></div>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endblock %}
+
+
+
+
+{% block nav__item_all %}
+	{% set count = 0 %}
+	{% for key, item in data.sounds %}
+		{% set count = count + 1 %}
+	{% endfor %}
+<div class="player-nav__item-wrapper" data-id="{{key}}">
+	<a href="#" class="player-nav__item player-nav__item--all">
+		<span class="player-nav__item-name">Все</span>
+		<span class="player-nav__item-counter"> {{ count }} </span>
+	</a>
+</div>
+{% endblock %}
+
+
+
+
+{% block nav__item %}
+{% for key, item in data.category %}
+	{% set count = 0 %}
+	{% for key2, item2 in data.sounds %}
+		{% if item2.category == key %}
+			{% set count = count + 1 %}
+		{% endif %}
+	{% endfor %}
+<div class="player-nav__item-wrapper" >
+	<a href="#" class="player-nav__item player-nav__item--group" data-id="{{key}}">
+		<span class="player-nav__item-name">{{ item }}</span>
+		<span class="player-nav__item-counter"> {{ count }} </span>
+	</a>
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{ title }}</title>
+	<link rel="stylesheet" href="f/styles/style.css" media="screen" title="no title">
+</head>
+<body>
+
+	<header class="player-header">
+		<div class="wrapper wrapper-visible">
+
+		<section class="player-header__login-header">
+			<div class="login-button">
+				<div class="login-button__logo" data-dynamic="icn_user"></div>
+				<span class="login-button__title">Войти</span>
+			</div>
+			<div class="arrow-button" data-dynamic="icn_back"></div>
+		</section>
+
+		<section class="player-header__main-header">
+			<div class="menu-button">
+				<div class="menu-button">
+					<div class="menu-button__element menu-button__element--1"></div>
+					<div class="menu-button__element menu-button__element--2"></div>
+					<div class="menu-button__element menu-button__element--3"></div>
+				</div>
+			</div>
+			<div class="play-button"></div>
+			<div class="search-button" data-dynamic="icn_search"></div>
+		</section>
+		</div>
+		<section class="search-panel hidden">
+			<div class="wrapper">
+				<div class="search-button" data-dynamic="icn_search"></div>
+				<form id="search" class="search-form">
+					<input type="text" class="search-field" placeholder="Поиск...">
+				</form>
+				<div class="cancel-button cancel-button--search"></div>
+			</div>
+		</section>
+	</header>
+
+	<main>
+	<div class="wrapper wrapper-visible">
+
+	  <section class="player-nav">
+
+		<section class="toggle-block">
+			<div class="toggle-block__wrapper">
+				<div class="toggle-block__title-block">
+					<div class="toggle-block__logo" data-dynamic="masson"></div>
+					<span class="toggle-block__title">Режим Бога</span>
+				</div>
+				<label for="toggle1">
+					<input type="checkbox" class="hidden good" name="toggle" id="toggle1">
+					<div godmod class="toggle">
+						<div class="toggle__element"></div>
+					</div>
+				</label>
+			</div>
+		  </section>
+
+		<div class="player-nav__item-wrapper">
+			<a href="#" class="player-nav__item player-nav__item--elects">
+				<span class="player-nav__item-name">Избранное</span>
+				<span class="player-nav__item-counter"></span>
+			</a>
+		</div>
+
+		{% block nav__item_all %}
+		{% endblock %}
+
+		{% block nav__item %}
+		{% endblock %}
+
+	  </section>
+
+    {% block content %}
+	{% endblock %}
+
+	</main>
+
+
+	{% include block('popup') %}
+
+	<div class="onboard hidden">
+	<img src="svg/Shape_3.svg" alt="" class="onboard-logo">
+	<h1 class="onboard-title">Речевые технологии</h1>
+	</div>
+
+	<script type="text/javascript" src="f/js/script.js"></script>
+	<!-- <script type="text/javascript" src="f/js/dynamic.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+.toggle {
+	  width: 97px;
+	  height: 50px;
+	  border-radius: 25px;
+	  background-color: $color__dark-grey;
+	  position: relative;
+		transition: background-color 0.3s;
+}
+
+.toggle__element {
+	  width: 37px;
+	  height: 37px;
+	  border-radius: 18px;
+	  margin: auto;
+	  margin-left: 9px;
+	  background-color: $color__white;
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+		transition: margin-left 0.3s;
+}
+
+#toggle1:checked ~ .toggle .toggle__element {
+	  margin-left: 52px;
+}
+#toggle1:checked ~ .toggle {
+	background-color: $color__black;
+}
+
+@media (max-width: 398px) {
+	.toggle {
+		  width: 70px;
+		  height: 35px;
+	}
+
+	.toggle__element {
+		  width: 24px;
+		  height: 24px;
+	}
+
+	#toggle1:checked ~ .toggle .toggle__element {
+		  margin-left: 38px;
+	}
+}

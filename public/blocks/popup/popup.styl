@@ -1,0 +1,104 @@
+.popup {
+	margin: auto;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	transition: 0.5s;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+
+	.cancel-button {
+		width: 27px;
+		height: 27px;
+	}
+}
+
+.popup__login {
+	  width: 75%;
+		max-width: 400px;
+	  margin: 0 auto;
+		margin-top: 20%;
+	  background-color: $color__white;
+	  border-radius: 12px;
+}
+
+.popup__login-header {
+	  padding: 40px;
+	  display: flex;
+	  justify-content: space-between;
+	  border-bottom: 1px solid $color__dark-grey;
+}
+
+.popup__login-name {
+	  text-transform: uppercase;
+	  font-size: 22px;
+	  font-weight: 600;
+	  font-family: "ProximaNovaBold", "Arial", sans-serif;
+}
+
+.popup__login-social {
+	display: flex;
+	justify-content: space-around;
+ 	padding: 55px 0 65px;
+}
+
+.ico-soc {
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ico-soc--vk {
+	background-color: $color__blue;
+}
+
+.ico-soc--fb {
+	background-color: $color__dark-blue;
+}
+
+.ico-soc__logo {
+	fill: $color__white;
+	width: 45px;
+	height: 45px;
+}
+
+@media (max-width: 398px) {
+	.ico-soc__logo {
+		width: 35px;
+		height: 35px;
+	}
+
+	.ico-soc {
+		width: 90px;
+		height: 90px;
+	}
+
+	.popup {
+		.cancel-button {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.popup__login-social {
+	 	padding: 35px 0 45px;
+	}
+
+	.popup__login-header {
+		padding: 20px;
+	}
+
+	.popup__login-name {
+		font-size: 18px;
+	}
+}

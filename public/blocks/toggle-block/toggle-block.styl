@@ -1,0 +1,42 @@
+.toggle-block {
+	padding: 25px 0;
+	display: block;
+}
+
+.toggle-block__wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.toggle-block__title-block {
+	display: flex;
+	align-items: center;
+}
+
+.toggle-block__logo {
+	width: 35px;
+	height: 30px;
+	margin-right: 20px;
+}
+
+.toggle-block__title {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: "ProximaNovaBold", "Arial", sans-serif;
+}
+
+.toggle-block,
+.player-nav__item {
+	border-bottom: 1px solid $color__dark-grey;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+@media (max-width: 398px) {
+	.toggle-block__logo {
+		height: 25px;
+	}
+}

@@ -1,0 +1,33 @@
+.player-nav {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: rgba(0,0,0,0.3);
+	overflow: scroll;
+	transition: 0.7s;
+	margin-left: -140px;
+}
+
+.player-nav__item-wrapper {
+	display: block;
+}
+
+.player-nav__item {
+	display: block;
+	padding: 35px 23px;
+	display: flex;
+	justify-content: space-between;
+
+	&--elects {
+		display: none;
+		.player-nav__item-name {
+			font-family: "ProximaNovaBold", "Arial", sans-serif;
+			font-weight: 600;
+		}
+	}
+}
+
+.player-nav__item:active {
+	background-color: $color__yellow;
+}

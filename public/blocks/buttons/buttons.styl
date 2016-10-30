@@ -1,0 +1,147 @@
+.arrow-button {
+	  width: 47px;
+	  height: 37px;
+	  fill: $color__white;
+}
+
+.cancel-button {
+	  width: 45px;
+	  height:  37px;
+	  position: relative;
+	  display: block;
+	  background: none;
+}
+
+.cancel-button::before,
+.cancel-button::after {
+	  content: "";
+	  position: absolute;
+	  right: 0px;
+		left: 0;
+	  top: 42%;
+	  width: 90%;
+	  height: 15%;
+	  background-color: $color__black;
+}
+
+.cancel-button::after {
+	  transform: rotate(-45deg);
+}
+
+.cancel-button::before {
+	    transform: rotate(45deg);
+}
+
+.menu-button {
+	width: 45px;
+	height: 37px;
+	position: relative;
+}
+
+.menu-button__element {
+	width: 45px;
+	height: 4px;
+	position: absolute;
+	background-color: $color__white;
+	content: "";
+	left: 0px;
+}
+
+.menu-button__element--1 {
+	top: 0;
+}
+
+.menu-button__element--2 {
+	top: 45%;
+}
+
+.menu-button__element--3 {
+	bottom: 0;
+}
+
+.login-button {
+	display: flex;
+}
+
+.login-button__logo {
+	width: 37px;
+	height: 37px;
+	fill: $color__white;
+}
+
+.login-button__title {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+}
+
+.play-button {
+	  width: 37px;
+	  height: 37px;
+	  background: none;
+	  border-radius: 50%;
+	  border: 13px solid $color__white;
+		box-sizing: border-box;
+		transition: border-radius 0.2s;
+		&--stop {
+			border-radius: 0;
+		}
+}
+
+.search-button {
+	  width: 45px;
+	  height: 37px;
+	  fill: $color__white;
+}
+
+.heart-like,
+.heart-dislike {
+	width: 38px;
+	height: 32px;
+	position: absolute;
+	transition: 0.3s;
+	right: 20px;
+	top: 28px;
+	fill: $color__brown;
+	z-index: 3;
+}
+
+.heart-like {
+	opacity: 0;
+}
+
+@media (max-width: 398px) {
+	.login-button__logo {
+		height: 28px;
+	}
+
+	.arrow-button {
+		width: 36px;
+		height: 28px;
+	}
+
+	.menu-button {
+		width: 36px;
+		height: 28px;
+		overflow: hidden;
+	}
+
+	.play-button {
+		width: 28px;
+		height: 28px;
+		border: 10px solid $color__white;
+	}
+
+	.search-button {
+		height: 28px;
+		width: 36px;
+	}
+
+	.heart-like,
+	.heart-dislike {
+		width: 34px;
+		height: 28px;
+		position: absolute;
+		top: 24px;
+	}
+}

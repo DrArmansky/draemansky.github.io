@@ -1,0 +1,154 @@
+@charset "utf8"
+
+*
+	margin 0
+	padding 0
+	outline none !important
+	-webkit-tap-highlight-color transparent
+
+$color__black = #000000
+$color__yellow = #fbec00
+$color__brown = #5b5500
+$color__white = #ffffff
+$color__grey = #dadada
+$color__dark-grey = #bdbdbd
+$color__blue = #4b75a3
+$color__dark-blue = #2556a0
+
+
+
+@font-face
+	font-weight: normal
+	font-style: normal
+	font-family: "ProximaNova"
+	src: url("../fonts/proxima_nova_regular.woff") format("woff"),
+		url("../fonts/proxima_nova_regular.woff2") format("woff2"),
+		url("../fonts/proxima_nova_regular.ttf") format("ttf"),
+		url("../fonts/proxima_nova_regular.svg") format("svg"),
+		url("../fonts/proxima_nova_regular.eot") format("eot")
+
+@font-face
+	font-weight: 600
+	font-style: normal
+	font-family: "ProximaNovaBold"
+	src: url("../fonts/proxima_nova_bold.woff") format("woff"),
+		url("../fonts/proxima_nova_bold.woff2") format("woff2"),
+		url("../fonts/proxima_nova_bold.ttf") format("ttf"),
+		url("../fonts/proxima_nova_bold.svg") format("svg"),
+		url("../fonts/proxima_nova_bold.eot") format("eot")
+
+@font-face
+	font-weight: 300
+	font-style: normal
+	font-family: "ProximaNovaLight"
+	src: url("../fonts/proxima_nova_bold.woff") format("woff"),
+		url("../fonts/proxima_nova_bold.woff2") format("woff2"),
+		url("../fonts/proxima_nova_bold.ttf") format("ttf"),
+		url("../fonts/proxima_nova_bold.svg") format("svg"),
+		url("../fonts/proxima_nova_bold.eot") format("eot")
+
+html,
+body
+	width: 100%
+	height: 100%
+
+
+body
+	font-size:  22px
+	font-family: 'ProximaNova', 'Arial', sans-serif
+	color: #000000
+	background: #ffffff
+	font-style: normal
+	font-weight: 300
+	margin: 0
+	z-index: 0
+	position: relative
+
+main
+	height: 100%
+
+
+img
+	max-width: 100%
+	height: auto
+
+
+button
+	border: none
+	outline: none
+	text-decoration: none
+	padding: 0
+
+
+h1, h2, h3,
+h4, h5, h6
+	margin: 0
+	padding: 0
+
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+
+p, figure
+	margin: 0
+	padding: 0
+
+
+blockquote
+	margin: 0
+
+
+a
+	color: #000000
+	text-decoration: none
+
+svg
+	width: 100%
+	height: 100%
+
+.wrapper {
+	max-width: 960px;
+	min-width: 320px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.wrapper-visible {
+	display: flex;
+	position: relative;
+	height: 100%;
+	align-items: center;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.show {
+	margin-right: -100% !important;
+}
+
+.trip {
+	margin-left: 0px !important;
+	background: rgba(0, 0, 0, 0) !important;
+}
+
+.appearance {
+	opacity: 1 !important;
+	transition: opacity .3s;
+}
+
+.slowhide {
+	opacity: 0 !important;
+	transition: opacity .3s;
+}
+
+@media (max-width: 398px) {
+	body {
+		font-size: 18px;
+	}
+}

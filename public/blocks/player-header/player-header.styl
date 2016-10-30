@@ -1,0 +1,30 @@
+.player-header {
+	background-color: $color__black;
+	color: $color__white;
+	padding: 22px 0 27px;
+	position: relative;
+}
+
+.player-header__login-header,
+.player-header__main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.player-header__login-header {
+	margin-left: -140px;
+	transition: 0.7s;
+}
+
+.player-header__main-header {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	transition: margin-right 0.7s;
+	background-color: $color__black;
+	margin: 0px;
+}
