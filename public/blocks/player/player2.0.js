@@ -51,7 +51,7 @@ function PLayer () {
                 bar.classList.add('positionBar--play')
                 if (ua.search(/Chrome/) > 0) {
                     console.log("Chrome");
-                    bar.style.animationDuration = audio.duration - 1.35 +'s'
+                    bar.style.animationDuration = audio.duration - 0.45 +'s'
                 } else {
                     console.log("Another");
                     bar.style.animationDuration = audio.duration + 0.4 +'s'
@@ -67,7 +67,7 @@ function PLayer () {
                 // bar.style.animationDuration = audio.duration +0.35+'s'
                 if (ua.search(/Chrome/) > 0) {
                     console.log("Chrome");
-                    bar.style.animationDuration = audio.duration - 1.35 +'s'
+                    bar.style.animationDuration = audio.duration - 0.45 +'s'
                 } else {
                     console.log("Another");
                     bar.style.animationDuration = audio.duration + 0.4 +'s'
@@ -78,7 +78,7 @@ function PLayer () {
             // bar.style.animationDuration = audio.duration +'s'
             if (ua.search(/Chrome/) > 0) {
                 console.log("Chrome");
-                bar.style.animationDuration = audio.duration - 1.35 +'s'
+                bar.style.animationDuration = audio.duration - 0.45 +'s'
             } else {
                 console.log("Another");
                 bar.style.animationDuration = audio.duration + 0.4 +'s'
